@@ -5,3 +5,4 @@ Things to Improve
 -Apollo
 -Redux
 -NextJS
+-SCSS
