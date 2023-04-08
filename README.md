@@ -6,4 +6,4 @@ Things to Improve
 -Redux
 -NextJS
 -SCSS
--Webpack/Vite
+-Vite
