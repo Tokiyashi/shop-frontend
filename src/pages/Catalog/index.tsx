@@ -1,20 +1,36 @@
-import React, {useEffect} from 'react';
-import {Box} from "@chakra-ui/react";
+import React, { useEffect } from "react";
+import { Box } from "@chakra-ui/react";
 import Cards from "./Cards";
-import {useQuery} from '@apollo/client';
-import {GET_ALL_PRODUCTS} from "../../query/product";
+import { useQuery } from "@apollo/client";
+import { GET_ALL_PRODUCTS } from "../../query/product";
+import Filters from "./Filters";
+import Page from "../../common/styles/Page";
+import Container from "./styles/Container";
+import CollectionHeader from "./CollectionHeader";
+import { ptr } from "../../utils/pxToRem";
 
 const Catalog = () => {
-  const {data, loading} = useQuery(GET_ALL_PRODUCTS)
+  const { data, loading } = useQuery(GET_ALL_PRODUCTS);
 
   useEffect(() => {
-    console.log(data)
-  }, [data])
+    console.log(data);
+  }, [data]);
 
   return (
-    <Box display='flex' w={'100%'}>
-      <Cards products={data.products}/>
-    </Box>
+    <Page>
+      <Container>
+        <Filters />
+        <Box
+          w="100%"
+          display="flex"
+          flexDirection="column"
+          padding={`0 ${ptr(50)}`}
+        >
+          <CollectionHeader />
+          {!loading && <Cards products={data?.products || []} />}
+        </Box>
+      </Container>
+    </Page>
   );
 };
 

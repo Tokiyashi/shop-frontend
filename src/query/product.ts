@@ -5,6 +5,7 @@ query ExampleQuery {
   products {
     name
     rating
+    imageUrl
   }
 }
 `

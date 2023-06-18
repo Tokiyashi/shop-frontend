@@ -1,19 +1,19 @@
-import React from 'react';
-import {Box} from "@chakra-ui/react";
-import ProductCard from './ProductCard';
-import {Product} from '../../../common/types/Product';
+import React from "react";
+import { Wrap } from "@chakra-ui/react";
+import ProductCard from "./ProductCard";
+import { Product } from "../../../common/types/Product";
 
 type Props = {
-  products: Product[]
-}
+  products: Product[];
+};
 
-const Cards = ({products}: Props) => {
+const Cards = ({ products }: Props) => {
   return (
-    <Box flexWrap='wrap' gap='2rem' display={'flex'} w={'100%'} justifyContent='space-between'>
-      {products.map(item =>
-        <ProductCard/>
-      )}
-    </Box>
+    <Wrap w="100%">
+      {[...products, ...products, ...products].map((item, index) => (
+        <ProductCard product={item} key={index} />
+      ))}
+    </Wrap>
   );
 };
 

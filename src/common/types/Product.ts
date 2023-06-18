@@ -1,4 +1,6 @@
-export type Product ={
+export type Product = {
   name: string;
-  rating: number
-}
+  rating: number;
+  price: number;
+  imageUrl: string;
+};

@@ -1,27 +1,34 @@
-import React from 'react';
-import {CardBody, CardFooter, Image, Text} from "@chakra-ui/react";
+import React from "react";
+import { Button, CardBody, CardFooter, Text, WrapItem } from "@chakra-ui/react";
 import StyledCard from "./styles/StyledCard";
-import {useTranslation} from "react-i18next";
-import {StarIcon} from "@chakra-ui/icons";
+import { useTranslation } from "react-i18next";
+import { StarIcon } from "@chakra-ui/icons";
+import { Product } from "../../../../common/types/Product";
+import ProductImage from "./styles/ProductImage";
+import { noImage } from "../../../../common/constants/noImage";
 
-const ProductCard = () => {
-  const {t} = useTranslation()
+type Props = { product: Product };
+
+const ProductCard = ({ product }: Props) => {
+  const { t } = useTranslation();
   return (
     <StyledCard>
-      <Image
-        borderRadius='1rem'
-        src='https://www.searchenginejournal.com/wp-content/uploads/2022/06/image-search-1600-x-840-px-62c6dc4ff1eee-sej-1280x720.png'/>
-      <CardBody>
-        <Text>
-          {t('ZARA Oversize heavy Weight T-Shirt')}
-        </Text>
+      <ProductImage borderRadius="1rem" src={product?.imageUrl || noImage} />
+      <CardBody
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        <Text fontSize="20px">{t(product.name)}</Text>
+        <Button>
+          <Text fontWeight="bold">${product?.price || "0.00"}</Text>
+        </Button>
       </CardBody>
-      <CardFooter>
-        <StarIcon color='orange'/>
+      <CardFooter display="flex" alignItems="center">
+        <StarIcon color="orange" />
         <Text>
-          5.0 1.2k {t('Reviews')}
+          {product?.rating} (1.2k {t("Reviews")})
         </Text>
-
       </CardFooter>
     </StyledCard>
   );

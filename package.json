@@ -15,9 +15,11 @@
     "@emotion/styled": "^11.10.6",
     "framer-motion": "^10.11.6",
     "graphql": "^16.6.0",
+    "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^12.2.0",
+    "react-icons": "^4.9.0",
     "react-router-dom": "^6.10.0",
     "ts-jest": "^29.1.0"
   },
