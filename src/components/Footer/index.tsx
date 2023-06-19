@@ -9,7 +9,7 @@ const Footer = () => {
     <Box
       w="100%"
       backgroundColor={theme.colors.primary["500"]}
-      h={ptr(731)}
+      h={ptr(331)}
     ></Box>
   );
 };

@@ -7,7 +7,7 @@ const StyledCard = styled(Card)`
   padding: 0;
   max-height: 25rem;
   box-shadow: none;
-  gap: 1rem;
+  gap: 0;
   min-width: 15rem;
   max-width: 20rem;
   @media (max-width: 760px) {

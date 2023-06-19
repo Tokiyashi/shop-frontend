@@ -18,13 +18,14 @@ const ProductCard = ({ product }: Props) => {
         display="flex"
         alignItems="center"
         justifyContent="space-between"
+        padding="1rem 0 0"
       >
         <Text fontSize="20px">{t(product.name)}</Text>
         <Button>
           <Text fontWeight="bold">${product?.price || "0.00"}</Text>
         </Button>
       </CardBody>
-      <CardFooter display="flex" alignItems="center">
+      <CardFooter display="flex" alignItems="center" padding="1rem 0 3rem">
         <StarIcon color="orange" />
         <Text>
           {product?.rating} (1.2k {t("Reviews")})

@@ -8,10 +8,10 @@ const CollectionHeader = () => {
 
   return (
     <Container>
-      <Text>{t("Summer Collection")}</Text>
+      <Text fontSize="xl">{t("Summer Collection")}</Text>
       <Box display="flex" gap="2rem">
-        <Text>{t("New")}</Text>
-        <Text>{t("Recommended")}</Text>
+        <Text fontSize="xl">{t("New")}</Text>
+        <Text fontSize="xl">{t("Recommended")}</Text>
       </Box>
     </Container>
   );

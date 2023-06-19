@@ -9,7 +9,10 @@ import Container from "./styles/Container";
 const theme = extendTheme({
   colors: {
     primary: {
-      500: "#a5fa7a",
+      500: "#8e33fd",
+    },
+    secondary: {
+      500: "#F8F9Fd",
     },
   },
 });

@@ -7,11 +7,10 @@ const Navigation = () => {
 
   return (
     <Box display="flex" w="md" justifyContent="space-between">
-      <Text fontSize={ptr(22)}>{t("Shop")}</Text>
-      <Text fontSize={ptr(22)}>{t("Men")}</Text>
-      <Text fontSize={ptr(22)}>{t("Women")}</Text>
-      <Text fontSize={ptr(22)}>{t("Combos")}</Text>
-      <Text fontSize={ptr(22)}>{t("Joggers")}</Text>
+      <Text fontSize="xl">{t("Shop")}</Text>
+      <Text fontSize="xl">{t("Collections")}</Text>
+      <Text fontSize="xl">{t("Combos")}</Text>
+      <Text fontSize="xl">{t("Accessories")}</Text>
     </Box>
   );
 };

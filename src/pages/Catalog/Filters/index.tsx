@@ -1,18 +1,26 @@
 import React from "react";
-import { Box, Collapse, useTheme } from "@chakra-ui/react";
+import { Accordion, useTheme } from "@chakra-ui/react";
 import { ptr } from "../../../utils/pxToRem";
+import { useTranslation } from "react-i18next";
+import Gender from "./Gender";
+import Size from "./Size";
 
 const Filters = () => {
   const theme = useTheme();
-
+  const { t } = useTranslation();
   return (
-    <Box
-      position="sticky"
-      border={`${ptr(1)} solid ${theme.colors.gray["300"]}`}
+    <Accordion
+      padding="2rem 0"
+      borderRadius={ptr(24)}
+      backgroundColor={theme.colors.secondary["500"]}
+      allowMultiple
       w={ptr(300)}
+      h="min-content"
     >
-      <Collapse defaultChecked={true}>Price</Collapse>
-    </Box>
+      Filter
+      <Gender />
+      <Size />
+    </Accordion>
   );
 };
 
