@@ -9,7 +9,7 @@ import Container from "./styles/Container";
 import CollectionHeader from "./CollectionHeader";
 import { ptr } from "../../utils/pxToRem";
 
-const Catalog = () => {
+const CatalogPage = () => {
   const { data, loading } = useQuery(GET_ALL_PRODUCTS);
 
   useEffect(() => {
@@ -34,4 +34,4 @@ const Catalog = () => {
   );
 };
 
-export default Catalog;
+export default CatalogPage;

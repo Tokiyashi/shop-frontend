@@ -13,10 +13,6 @@ const StyledCard = styled(Card)`
   @media (max-width: 760px) {
     width: 100%;
   }
-  //
-  //@media (min-width: 1400px) {
-  //  width: 20%;
-  //}
 `;
 
 export default StyledCard;

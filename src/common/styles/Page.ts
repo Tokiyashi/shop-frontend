@@ -8,5 +8,7 @@ const Page = styled(Box)`
   justify-content: flex-start;
   width: 100%;
   padding: 0 ${ptr(100)};
+  min-height: 100vh;
+  align-items: center;
 `;
 export default Page;

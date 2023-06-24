@@ -1,10 +1,10 @@
 import React from "react";
-import Catalog from "./Catalog";
+import CatalogPage from "./CatalogPage";
 import { extendTheme, ThemeProvider } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Route, Routes } from "react-router-dom";
-import Container from "./styles/Container";
+import ProductPage from "./ProductPage";
 
 const theme = extendTheme({
   colors: {
@@ -22,9 +22,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <Header />
       <Routes>
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/catalog/:itemId" element={<Catalog />} />
-        <Route path="/" element={<Catalog />} />
+        <Route path="/products" element={<CatalogPage />} />
+        <Route path="/product/:id" element={<ProductPage />} />
       </Routes>
       <Footer />
     </ThemeProvider>

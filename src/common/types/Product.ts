@@ -3,4 +3,5 @@ export type Product = {
   rating: number;
   price: number;
   imageUrl: string;
+  id?: string;
 };
