@@ -1,5 +1,5 @@
 import React from "react";
-import { Accordion, useTheme } from "@chakra-ui/react";
+import { Accordion, Text, useTheme } from "@chakra-ui/react";
 import { ptr } from "../../../utils/pxToRem";
 import { useTranslation } from "react-i18next";
 import Gender from "./Gender";
@@ -16,8 +16,11 @@ const Filters = () => {
       allowMultiple
       w={ptr(300)}
       h="min-content"
+      alignItems="center"
     >
-      Filter
+      <Text fontSize="xl" margin="auto" w="min-content">
+        {t("Фильтры")}
+      </Text>
       <Gender />
       <Size />
     </Accordion>

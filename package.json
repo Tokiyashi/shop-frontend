@@ -21,7 +21,8 @@
     "react-i18next": "^12.2.0",
     "react-icons": "^4.9.0",
     "react-router-dom": "^6.10.0",
-    "ts-jest": "^29.1.0"
+    "ts-jest": "^29.1.0",
+    "zustand": "^4.4.1"
   },
   "devDependencies": {
     "@apollo/client": "^3.7.11",

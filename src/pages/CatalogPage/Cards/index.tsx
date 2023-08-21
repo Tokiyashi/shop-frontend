@@ -10,7 +10,7 @@ type Props = {
 const Cards = ({ products }: Props) => {
   return (
     <Wrap w="100%">
-      {[...products, ...products, ...products].map((item, index) => (
+      {products.map((item, index) => (
         <ProductCard product={item} key={index} />
       ))}
     </Wrap>
